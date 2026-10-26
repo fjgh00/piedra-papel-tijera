@@ -41,7 +41,7 @@ def main():
     """Controla el desarrollo del juego."""
 
     # Mostrar el título del juego
-    print("=== Piedra, papel o tijeras ===")
+    print("\n=== Piedra, papel o tijeras ===")
 
     # Inicialización de las variables
     jugar = True
@@ -89,7 +89,12 @@ def main():
                 empates += 1
 
     # Mostrar los resultados finales
-    # PENDIENTE: mostrar el marcador
+
+    # Mostrar los resultados finales
+    print("\n=== Marcador final ===")
+    print(f"Victorias del usuario: {victorias_usuario}")
+    print(f"Victorias del ordenador: {victorias_ordenador}")
+    print(f"Empates: {empates}\n")
 
 
 # Inicio del programa
