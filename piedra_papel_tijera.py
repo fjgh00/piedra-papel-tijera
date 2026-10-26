@@ -36,8 +36,12 @@ def decidir_ganador(user_action, computer_action):
         else:
             return "ordenador"
 
+
 def main():
     """Controla el desarrollo del juego."""
+
+    # Mostrar el título del juego
+    print("=== Piedra, papel o tijeras ===")
 
     # Inicialización de las variables
     jugar = True
@@ -47,7 +51,27 @@ def main():
 
     # Bucle principal del juego
     while jugar:
-        pass
+
+        # Pedir la jugada al usuario
+        user_action = input(
+            "Elige piedra, papel o tijeras (o escribe 'fin' para salir): "
+        ).lower().strip()
+
+        # Comprobar si el usuario quiere terminar
+        if user_action == "fin":
+            jugar = False
+
+        # Comprobar si la jugada es válida
+        elif user_action not in (PIEDRA, PAPEL, TIJERAS):
+            print("Jugada no válida. Inténtalo de nuevo.")
+
+        # Procesar una jugada válida
+        else:
+            # PENDIENTE: lógica de la ronda
+            pass
+
+    # Mostrar los resultados finales
+    # PENDIENTE: mostrar el marcador
 
 
 # Inicio del programa
