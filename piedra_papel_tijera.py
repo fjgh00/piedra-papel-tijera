@@ -67,8 +67,26 @@ def main():
 
         # Procesar una jugada válida
         else:
-            # PENDIENTE: lógica de la ronda
-            pass
+            # Elegir la jugada del ordenador
+            computer_action = random.choice((PIEDRA, PAPEL, TIJERAS))
+
+            # Mostrar las jugadas
+            print(f"Tú has elegido.........: {user_action}")
+            print(f"El ordenador ha elegido: {computer_action}")
+
+            # Determinar el resultado de la ronda
+            resultado = decidir_ganador(user_action, computer_action)
+
+            # Mostrar el resultado e incrementar el contador
+            if resultado == "usuario":
+                print("¡Has ganado esta ronda!\n")
+                victorias_usuario += 1
+            elif resultado == "ordenador":
+                print("El ordenador gana esta ronda.\n")
+                victorias_ordenador += 1
+            else:
+                print("¡Empate!\n")
+                empates += 1
 
     # Mostrar los resultados finales
     # PENDIENTE: mostrar el marcador
